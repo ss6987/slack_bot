@@ -1,6 +1,5 @@
 from slackbot.bot import respond_to
 from slackbot.bot import listen_to
-from slackbot.bot import default_reply
 
 return_message = [
     ["かんかん", "みかん"],
@@ -16,9 +15,9 @@ return_message = [
     ["おはな", "マルーーー！！"],
     ["みなさーん", "シャイニー！！"],
     ["今日も一日", "頑張・・・・ルビィ～～～～！！"],
-    ["にっこにっこにー","にっこにっこにー!"],
-    ["252521","にっこにっこにー"],
-    ["だれかたすけてー","ちょっとまっててー！"],
+    ["にっこにっこにー", "にっこにっこにー!"],
+    ["252521", "にっこにっこにー"],
+    ["だれかたすけてー", "ちょっとまっててー！"],
     ["にゃんにゃんにゃー", "にゃんにゃんにゃー！"],
     ["ことりのおやつにしてやるぞー！", "ちゅんちゅん！"],
     ["かしこいかわいい", "えりーちかー！"],
@@ -30,7 +29,7 @@ return_message = [
 def listen_func(message):
     string = message.body["text"]
     if string in "-list":
-        return_string = ""
+        return_string = "コール,レスポンス\n"
         for i in return_message:
             return_string = return_string + i[0] + "," + i[1] + "\n"
         message.send(return_string)
@@ -44,7 +43,7 @@ def listen_func(message):
 def listen_func(message):
     string = message.body["text"]
     if string in "-list":
-        return_string = ""
+        return_string = "コール,レスポンス\n"
         for i in return_message:
             return_string = return_string + i[0] + "," + i[1] + "\n"
         message.send(return_string)
